@@ -1,0 +1,63 @@
+:root {
+    --bg-color: rgb(68,35,89); /* Pantone 269 */
+    --mg-color: rgb(89,17,142); /* Pantone 267 */
+    --hg-color: white;
+    --fg-color: rgb(229,219,186); /* Pantone 4545 */
+    --navobj-size: max(5vmin, 1cm);
+    --navobj-div-width: calc(100vw - var(--navobj-size));
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    margin-top: 5vmin;
+}
+
+nav {
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--mg-color);
+    color: var(--hg-color);
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 5mm;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navobj {
+    display: flex;
+    height: var(--navobj-size);
+}
+
+.navobj img {
+    width: var(--navobj-size);
+    height: inherit;
+    align-self: flex-start;
+}
+
+.navobj a {
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    margin: 0 1em;
+}
+
+.navobj a:link, .navobj a:visited {
+    color: var(--hg-color);
+}
+
+.navobj a:hover {
+    color: var(--fg-color);
+}
+
+.navobj a:active {
+    color: var(--bg-color);
+}
+
+div.navobj {
+    flex-flow: row-reverse nowrap;
+    width: var(--navobj-div-width);
+}
