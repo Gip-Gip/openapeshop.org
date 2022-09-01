@@ -10,13 +10,17 @@
 body {
     background-color: var(--bg-color);
     color: var(--fg-color);
-    margin-top: 5vmin;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+main {
+    margin: 1vmin;
 }
 
 nav {
     display: flex;
     width: 100vw;
-    position: fixed;
     left: 0;
     top: 0;
     background-color: var(--mg-color);
@@ -24,7 +28,6 @@ nav {
     flex-flow: row nowrap;
     align-items: center;
     font-size: 5mm;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navobj {
@@ -33,8 +36,8 @@ nav {
 }
 
 .navobj img {
-    width: var(--navobj-size);
-    height: inherit;
+    height: var(--navobj-size);
+    width: auto;
     align-self: flex-start;
 }
 
@@ -55,6 +58,28 @@ nav {
 
 .navobj a:active {
     color: var(--bg-color);
+}
+
+a.listing {
+    text-decoration: none;
+    text-align: left;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1vmin 10vmin;
+    border: 2px solid var(--fg-color);
+    border-radius: 1vw;
+}
+
+a.listing:link, a.listing:visited {
+    color: var(--hg-color);
+}
+
+h3.listing {
+    margin: 1vmin;
+}
+
+p.listing {
+    margin: 1vmin;
 }
 
 div.navobj {

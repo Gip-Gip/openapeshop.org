@@ -2,5 +2,15 @@
 <header><h1 id="tag_{{ .Title }}">{{ .Title | title }}</h1></header>
 <article>
 {{ .Content -}}
+{{- range.Pages }}
+    <a class="listing" href='{{ .RelPermalink }}' style='background-color: black; background-image: {{ .Param "pimg" }};'>
+        <h3 class="listing">
+            {{ .Title }}
+        </h3>
+        <p class="listing">
+            {{ .Summary }}
+        </p>
+    </a>
+{{ end -}}
 </article>
 {{- partial "footer.html" . }}
