@@ -1,6 +1,6 @@
 {{ partial "header.html" . -}}
-<header><h1 id="tag_{{ .Title }}">{{ .Title | title }}</h1></header>
-<article>
+<header><h1 id='title_{{ replace .Title " " "" }}'>{{ .Title | title }}</h1></header>
+<article id='article_{{ replace .Title " " "" }}'>
 {{ .Content -}}
 {{- range.Pages }}
     <a class="listing" href='{{ .RelPermalink }}' style='background-color: black; background-image: {{ .Param "pimg" }};'>

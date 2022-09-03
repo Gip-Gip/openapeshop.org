@@ -1,7 +1,7 @@
 
 {{ partial "header.html" . -}}
-<header><h1>{{ .Title }}</h1></header>
-<article>
-{{ .Content -}}
-{{ partial "footer.html" . }}
+<header><h1 id='title_{{ replace .Title " " "" }}'>{{ .Title | title }}</h1></header>
+<article id='article_{{ replace .Title " " "" }}'>
+    {{ .Content -}}
 </article>
+{{ partial "footer.html" . }}

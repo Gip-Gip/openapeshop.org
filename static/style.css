@@ -11,7 +11,20 @@ body {
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5mm;
     margin: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.7em;
+}
+
+h3 {
+    font-size: 1.3em;
 }
 
 main {
@@ -85,4 +98,16 @@ p.listing {
 div.navobj {
     flex-flow: row-reverse nowrap;
     width: var(--navobj-div-width);
+}
+
+#title_OpenApeShop {
+    text-align: center;
+}
+
+#article_OpenApeShop {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 20vh 10vw;
 }
