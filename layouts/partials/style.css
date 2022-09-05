@@ -1,10 +1,14 @@
+{{ $baseURL := .Site.BaseURL }}
+
 :root {
     --bg-color: rgb(68,35,89); /* Pantone 269 */
     --mg-color: rgb(89,17,142); /* Pantone 267 */
     --hg-color: white;
     --fg-color: rgb(229,219,186); /* Pantone 4545 */
+    --foot-color: rgb(43,43,40); /* Pantone 426 */
     --navobj-size: max(5vmin, 1cm);
     --navobj-div-width: calc(100vw - var(--navobj-size));
+    --vh-postnav: calc(100vh - var(--navobj-size));
 }
 
 body {
@@ -15,12 +19,43 @@ body {
     margin: 0;
 }
 
+footer.page {
+    background-color: var(--foot-color);
+    margin: 0;
+    font-size: 0.75em;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    border-top: 1mm solid;
+    border-image: linear-gradiant(from top, black, var(--foot-color)) 1;
+}
+
+footer.page p {
+    margin: 1em;
+}
+
+a:link, a:visited {
+    color: var(--hg-color);
+}
+
+a:active, a:hover {
+    color: var(--fg-color);
+}
+
 h1 {
     font-size: 2em;
+    border-color: var(--fg-color);
 }
 
 h2 {
     font-size: 1.7em;
+    border-image: linear-gradient(90deg, var(--fg-color), var(--mg-color)) 1;
+}
+
+h1, h2 {
+    padding: 0.5em;
+    border-bottom: 1mm solid;
 }
 
 h3 {
@@ -37,6 +72,7 @@ nav {
     left: 0;
     top: 0;
     background-color: var(--mg-color);
+    background-clip: border-box;
     color: var(--hg-color);
     flex-flow: row nowrap;
     align-items: center;
@@ -74,6 +110,9 @@ nav {
 }
 
 a.listing {
+    background-color: black;
+    background-size: cover;
+    background-position: center;
     text-decoration: none;
     text-align: left;
     display: flex;
@@ -87,27 +126,16 @@ a.listing:link, a.listing:visited {
     color: var(--hg-color);
 }
 
-h3.listing {
-    margin: 1vmin;
+header.listing, h3.listing, p.listing, footer.listing {
+    margin: 0.5rem;
 }
 
-p.listing {
-    margin: 1vmin;
+footer.listing {
+    font-size: 0.75em;
+    text-align: right;
 }
 
 div.navobj {
     flex-flow: row-reverse nowrap;
     width: var(--navobj-div-width);
-}
-
-#title_OpenApeShop {
-    text-align: center;
-}
-
-#article_OpenApeShop {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-    margin: 20vh 10vw;
 }

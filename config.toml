@@ -1,3 +1,8 @@
 baseURL = "https://openapeshop.org"
 languageCode = "en-us"
 title = "Open Ape Shop"
+
+[params]
+    favicon_light = "/favicon_light.png"
+    favicon_dark = "/favicon_dark.png"
+    default_pimg = "/default_article.jpg"

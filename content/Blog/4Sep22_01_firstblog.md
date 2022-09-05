@@ -1,6 +1,7 @@
 +++
-title = "Software"
-weight = 4
+title = "Welcome To OpenApeShop.org!"
+date = "2022-09-04"
+author = "Charles Thompson"
 +++
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Magna ac placerat vestibulum lectus mauris ultrices eros. Tellus molestie nunc non blandit massa enim nec dui. Mattis rhoncus urna neque viverra justo nec ultrices dui. Dapibus ultrices in iaculis nunc. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Egestas pretium aenean pharetra magna ac placerat vestibulum. Aliquam ultrices sagittis orci a scelerisque. Commodo elit at imperdiet dui accumsan sit amet. Vestibulum sed arcu non odio. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Dictum varius duis at consectetur lorem donec massa. Ultricies lacus sed turpis tincidunt id aliquet risus. Sodales neque sodales ut etiam sit.

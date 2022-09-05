@@ -1,0 +1,33 @@
+{{ $baseURL := .Site.BaseURL }}
+
+#body_OpenApeShop {
+    text-align: center;
+    background-image: url("{{ $baseURL }}/main_backdrop.jpg");
+    background-size: cover;
+    background-origin: border-box;
+    background-clip: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+#title_OpenApeShop {
+    text-align: center;
+    margin: 0 1em;
+}
+
+
+
+#article_OpenApeShop {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 20vh 10vw;
+}
+
+#article_OpenApeShop h2 {
+    padding: 0.5em;
+    
+}

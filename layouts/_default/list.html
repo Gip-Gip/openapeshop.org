@@ -1,15 +1,26 @@
+{{ $baseURL := .Site.BaseURL }}
+
 {{ partial "header.html" . -}}
-<header><h1 id='title_{{ replace .Title " " "" }}'>{{ .Title | title }}</h1></header>
+<header>
+    <h1 id='title_{{ replace .Title " " "" }}'>{{ .Title | title }}</h1>
+</header>
 <article id='article_{{ replace .Title " " "" }}'>
 {{ .Content -}}
 {{- range.Pages }}
-    <a class="listing" href='{{ .RelPermalink }}' style='background-color: black; background-image: {{ .Param "pimg" }};'>
-        <h3 class="listing">
-            {{ .Title }}
-        </h3>
+    {{ $pimg := $.Site.Params.default_pimg }}
+    {{ with .Params.pimg }}
+        {{ $pimg = . | safeCSS }}
+    {{ end }}
+    <a class="listing" href='{{ .RelPermalink }}' style='background-image: url("{{ $baseURL }}{{ $pimg }}");'>
+        <header class="listing">
+            <h3>{{ .Title }}</h3>
+        </header>
         <p class="listing">
             {{ .Summary }}
         </p>
+        <footer class="listing">
+            {{ .Params.author }}, {{ .Date | time.Format ":date_medium" }}
+        </footer>
     </a>
 {{ end -}}
 </article>

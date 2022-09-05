@@ -1,21 +1,34 @@
-
 <!DOCTYPE html>
+
+{{ $ctx := . }}
+{{ $baseURL := .Site.BaseURL }}
+
 <html lang="{{ .Site.Language }}">
 <head>
 	<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
-	<link rel="canonical" href="{{ .Site.BaseURL }}">
+	<link rel="canonical" href="{{ $baseURL }}">
 	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
-	<link rel='stylesheet' type='text/css' href='/style.css'>
-	{{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">
-	{{ end -}}
+
+    <style>
+        {{ partial "style.css" $ctx | safeCSS }}
+        {{ with .Params.css }}
+            {{ partial . $ctx | safeCSS }}
+        {{ end }}
+    </style>
+
+	{{ with .Site.Params.favicon_light }}<link rel="icon" href="{{ $.Site.BaseURL }}{{ . }}" media="(prefers-color-scheme: light)">{{ end }}
+    {{ with .Site.Params.favicon_dark }}<link rel="icon" href="{{ $.Site.BaseURL }}{{ . }}" media="(prefers-color-scheme: dark)">{{ end }}
+
+
+    {{ hugo.Generator }}
 	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
-	{{ if isset .Params "tags" }}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
+	{{ if isset .Params "tags" }}<meta name="keywords" content='{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}'>
 	{{ end -}}
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
 </head>
-<body>
+<body id='body_{{ replace .Title " " "" }}'>
     <nav class="navobj">
         <a class="navobj" href="{{ .Site.BaseURL }}">
             <img alt="Open Ape Shop" src="{{ .Site.BaseURL }}/openapeshop.png"/>
