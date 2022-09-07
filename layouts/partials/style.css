@@ -22,6 +22,10 @@ body {
     margin: 0;
 }
 
+article {
+    margin: 1em;
+}
+
 footer.page {
     background-color: var(--foot-color);
     margin: auto 0 0 0;
@@ -44,19 +48,23 @@ a:active, a:hover {
     color: var(--fg-color);
 }
 
-h1 {
-    font-size: 2em;
-    border-color: var(--fg-color);
-}
-
-h2 {
-    font-size: 1.7em;
-    border-image: linear-gradient(90deg, var(--fg-color), var(--mg-color)) 1;
+h1, h2, h3 {
+    color: var(--hg-color);
 }
 
 h1, h2 {
     padding: 0.5em;
     border-bottom: 1mm solid;
+}
+
+h1 {
+    font-size: 2em;
+    border-color: var(--hg-color);
+}
+
+h2 {
+    font-size: 1.7em;
+    border-image: linear-gradient(90deg, var(--fg-color), var(--mg-color)) 1;
 }
 
 h3 {

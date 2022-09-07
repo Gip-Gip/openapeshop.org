@@ -1,9 +1,7 @@
 +++
-title = "Blog"
+title = "Charles Thompson"
 weight = 3
 date = "2022-09-06"
 author = "Charles Thompson"
-layout = "list"
+layout = "single"
 +++
-
-Check out our blogposts!

@@ -2,13 +2,19 @@
     <footer class="page">
         <p>
             {{ .Site.Copyright }}<br>
+            "{{ .Name }}" authored by {{ .Params.author }} on {{ .Date | time.Format ":date_long" }}<br>
+
             Powered by <a href="https://gohugo.io/">HUGO</a> v{{ hugo.Version }}. Layout derived from the <a href="https://github.com/LukeSmithxyz/lugo">lugo</a> theme developed by Luke Smith<br>
+
             {{ with .Params.credits }}
                 {{ range . }}
                     {{ . | markdownify }}<br>
                 {{ end }}
             {{ end }}
-            Default article image derived from photo by <a href="https://www.pexels.com/photo/male-master-working-with-metal-tools-in-garage-3822844/">Andrea Piacquadio from Pexels</a>
+
+            {{ if eq .Params.layout "list" }}
+                Default article image derived from photo by <a href="https://www.pexels.com/photo/male-master-working-with-metal-tools-in-garage-3822844/">Andrea Piacquadio from Pexels</a>
+            {{ end }}
         </p>
     </footer>
 </body>
