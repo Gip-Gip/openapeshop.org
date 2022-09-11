@@ -6,3 +6,6 @@ title = "Open Ape Shop"
     favicon_light = "/favicon_light.png"
     favicon_dark = "/favicon_dark.png"
     default_pimg = "/default_article.jpg"
+
+[minify]
+    minifyOutput = true

@@ -11,4 +11,4 @@ credits = [ "Background image derived from photo by [Krivec Ales from Pexels](ht
 
 From basic everyday software utilities to rocket computers, we pride ourselves in our ability to make unique and robust software and hardware solutions.
 
-See our [initial blogpost](/blog/4sep22_01_firstblog/).
+See our [initial blogpost](/blog/6sep22_01_firstblog/).
