@@ -1,0 +1,72 @@
+{{ $baseURL := .Site.BaseURL }}
+
+/* All responsive styling goes here */
+
+/* Set nav bar up initially for a mobile device (or a browser that does not respond to media queries, as found during testing) */
+
+#togglemenu {
+    display: none;
+}
+
+#togglelabel {
+    display: flex;
+    width: calc(100vw - var(--navobj-size));
+    flex-flow: row-reverse nowrap;
+}
+
+#togglelabel img {
+    height: var(--navobj-size);
+    width: auto;
+}
+
+nav {
+    flex-flow: column nowrap;
+    font-size: 2em;
+}
+
+#navitems {
+    flex-flow: column nowrap;
+    display: none;
+}
+
+#navhead {
+    min-width: 100vw;
+}
+
+#navitems a {
+    margin: 0.25em;
+}
+
+#togglemenu:checked ~ #navitems {
+    display: flex;
+}
+
+#togglemenu:checked ~ #navhead #togglelabel img  {
+    content: url("{{ $baseURL }}/navx.png");
+}
+
+/* Make the navbar more suitable for larger displays */
+
+@media (width > 200mm) {
+    #togglelabel {
+        display: none;
+    }
+    
+    nav {
+        flex-flow: row nowrap;
+        font-size: 5mm;
+    }
+    
+    #navitems {
+        flex-flow: row-reverse nowrap;
+        display: flex;
+    }
+    
+    #navhead {
+        min-width: auto;
+    }
+    
+    #navitems a {
+        margin: 0 1em;
+    }
+}

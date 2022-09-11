@@ -18,8 +18,8 @@ body {
     flex-direction: column;
     color: var(--fg-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 5mm;
     margin: 0;
+    border: 0 solid black;
 }
 
 article {
@@ -78,19 +78,23 @@ main {
 nav {
     display: flex;
     width: 100vw;
-    left: 0;
-    top: 0;
     background-color: var(--mg-color);
     background-clip: border-box;
     color: var(--hg-color);
-    flex-flow: row nowrap;
     align-items: center;
-    font-size: 5mm;
+}
+
+#navhead {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#navhead a {
+    margin: 0;
 }
 
 .navobj {
     display: flex;
-    height: var(--navobj-size);
 }
 
 .navobj img {
@@ -99,11 +103,10 @@ nav {
     align-self: flex-start;
 }
 
-.navobj a {
+.navobj a:link {
     text-decoration: none;
     text-align: center;
     align-items: center;
-    margin: 0 1em;
 }
 
 .navobj a:link, .navobj a:visited {
@@ -144,7 +147,6 @@ footer.listing {
     text-align: right;
 }
 
-div.navobj {
-    flex-flow: row-reverse nowrap;
+#navitems {
     width: var(--navobj-div-width);
 }

@@ -15,6 +15,8 @@
             {{ if eq .Params.layout "list" }}
                 Default article image derived from photo by <a href="https://www.pexels.com/photo/male-master-working-with-metal-tools-in-garage-3822844/">Andrea Piacquadio from Pexels</a>
             {{ end }}
+
+            Site rebuilt at {{ now | time.Format ":time_short" }}, {{ now | time.Format ":date_long" }}
         </p>
     </footer>
 </body>

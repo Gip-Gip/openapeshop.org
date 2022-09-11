@@ -11,6 +11,8 @@
 
     <style>
         {{ partial "style.css" $ctx | safeCSS }}
+        {{ partial "responsive.css" $ctx | safeCSS }}
+
         {{ with .Params.css }}
             {{ partial . $ctx | safeCSS }}
         {{ end }}
@@ -30,10 +32,19 @@
 </head>
 <body id='body_{{ replace .Title " " "" }}'>
     <nav class="navobj">
-        <a class="navobj" href="{{ .Site.BaseURL }}">
-            <img alt="Open Ape Shop" src="{{ .Site.BaseURL }}/openapeshop.png"/>
-        </a>
-        <div class="navobj">
+        <input id="togglemenu" type="checkbox">
+
+        <div id="navhead">
+            <a class="navobj" href="{{ .Site.BaseURL }}">
+                <img alt="Open Ape Shop" src="{{ .Site.BaseURL }}/openapeshop.png"/>
+            </a>
+
+            <label id="togglelabel" for='togglemenu'>
+                <img src="{{ $baseURL }}/navburger.png" alt="menu">
+            </label>
+        </div>
+
+        <div id="navitems">
             {{- range.Site.Sections.ByWeight}}
                 <a class="navobj" href="{{ .RelPermalink }}">
                     {{ .Title }}
