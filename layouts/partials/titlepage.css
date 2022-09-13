@@ -2,7 +2,7 @@
 
 #body_OpenApeShop {
     text-align: center;
-    background-image: url("{{ $baseURL }}/main_backdrop.jpg");
+    background-image: url("{{ $baseURL }}main_backdrop.jpg");
     background-size: cover;
     background-origin: border-box;
     background-clip: border-box;

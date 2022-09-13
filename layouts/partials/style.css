@@ -26,6 +26,18 @@ article {
     margin: 1em;
 }
 
+header.title {
+    width: 100vw;
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title h1 {
+    margin: 1em;
+}
+
 footer.page {
     background-color: var(--foot-color);
     margin: auto 0 0 0;

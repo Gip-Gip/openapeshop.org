@@ -1,6 +1,6 @@
 +++
 title = "{{ replace .Name "-" " " | title }}"
-date = {{ .Date }}
+date = {{ now }}
 draft = true
 layout = "list"
 +++

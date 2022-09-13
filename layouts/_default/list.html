@@ -1,9 +1,6 @@
 {{ $baseURL := .Site.BaseURL }}
 
-{{ partial "header.html" . -}}
-<header>
-    <h1 id='title_{{ replace .Title " " "" }}'>{{ .Title | title }}</h1>
-</header>
+{{ partial "header.html" . }}
 <article id='article_{{ replace .Title " " "" }}'>
 {{ .Content -}}
 {{- range.Pages }}

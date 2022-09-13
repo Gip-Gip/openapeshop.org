@@ -52,4 +52,7 @@
             {{ end -}}
         </div>
     </nav>
+    <header class="title" {{ with .Params.headerimg }}style='background-image: url("{{ $baseURL }}{{ . }}")'{{ end }}>
+        <h1 id='title_{{ replace .Title " " "" }}'>{{ .Title | title }}</h1>
+    </header>
     <main>
