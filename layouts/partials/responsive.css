@@ -25,7 +25,7 @@ nav {
 }
 
 #navitems {
-    flex-flow: column nowrap;
+    flex-flow: column-reverse nowrap;
     display: none;
 }
 

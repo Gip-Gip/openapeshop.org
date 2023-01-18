@@ -1,11 +1,11 @@
-+++
-title = "Welcome To OpenApeShop.org!"
-date = "2022-09-06"
-author = "Charles Thompson"
-layout = "single"
-summary = "OpenApeShop.org is online! Read out our plans, and understand the ideals and goals of Open Ape Shop"
-tags = ['Update', 'Goals']
-+++
+---
+title: Welcome To OpenApeShop.org!
+date: 2022-09-06
+author: Charles Thompson
+layout: single
+summary: OpenApeShop.org is online! Read out our plans, and understand the ideals and goals of Open Ape Shop
+tags: ['Update', 'Goals']
+---
 
 ### OpenApeShop.org is finally online!
 The site is still under construction, as can be seen but the basic layout is more or less done and work can be started on documenting all the OAS projects and such.

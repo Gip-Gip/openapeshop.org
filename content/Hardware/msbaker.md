@@ -8,7 +8,7 @@ headerimg = "msbaker_header.jpg"
 pimg = "msbaker_header.jpg"
 +++
 
-Ms. Baker is a compact microcomputer built off the RP2040, specifically with model rocketry in mind.
+**Ms. Baker is a compact microcomputer built off the RP2040, specifically with model rocketry in mind.**
 Occupying a footprint under 10cm&sup2;, this computer provides a unique density of many useful components, including a compact **25 pin GPIO** connector and a high accuracy **IMU**.
 These features in a compact and light package is especially useful for low and medium power rockets, but may also find use in other applications where an ultra-small microcomputer may be needed.
 
