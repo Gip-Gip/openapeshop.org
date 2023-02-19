@@ -21,6 +21,7 @@ features I find useful (such as printable lable generation).
 Also since it is built in Rust, it is naturally a very robust program with minimal bugs by
 design, and you can be sure that your data is very unlikely to be corrupted or unreachable
 by a simple programming error.
+![me using printed labels to organize electronic components](/software/pinv/pinv_irl_example.jpg)
 
 ## Usage
 
@@ -43,6 +44,7 @@ or enter **Entry View by selecting a catagory and pressing "Enter" or "Return"**
 In entry view, it will display what catagory you're in at the top of the screen
 along with all entries in a catagory(if there are none it will be empty).
 You also have access to the entry view modes
+![catagory view](/software/pinv/catagory_view.png)
 
 #### Entry View Modes:
  - `a` - add entry mode
@@ -56,6 +58,7 @@ You also have access to the entry view modes
 Additionally, you can **delete an entry by pressing "Del"**, **clear last applied
 constraint by pressing "c"**, **clear all constraints by pressing "C"**, or
 **return to catagory view by pressing "Esc"**
+![entry view](/software/pinv/entry_view.png)
 
 ### TUI Mode Summaries
 
@@ -75,6 +78,7 @@ number, and "real" which is any number including decimal numbers.
 
 Once you have added the fields you want, you can select the add button to add
 the catagory.
+![add catagory mode in action](/software/pinv/add_catagory_mode.png)
 
 #### Add Entry Mode
 In this mode you are presented with a dialog to add an entry. There are many
@@ -89,13 +93,14 @@ item you have(this is not a real so no halves or decimals are allowed).
 After filling out all of the mandatory fields, and the fields you desire to fill
 out, you can select the add button to add the entry. All non-filled out fields will
 be set to NULL and can be modified at a later date
+![add mode](/software/pinv/add_mode.png)
 
 #### Find Mode
 In this mode you are presented with a dialog that can be quickly used to find
-a specific entry given you know it's key. This can be useful if you want to find
 out something specific about something in your inventory, or if you need to delete it.
 
 Simply type in the entry's key in the key field and select the find button to find the entry.
+![find mode](/software/pinv/find_mode.png)
 
 #### Filter Mode
 In this mode you are presented with a dialog used to apply constraints and "filter"
@@ -104,18 +109,21 @@ the type of comparison to make, and the value you wish to compare the entries to
 
 Once you have your constraint filled out you select the filter button and your
 constraint should be applied and visible at the top of the screen.
+![filter mode](/software/pinv/filter_mode.png)
 
 #### Give Mode
 In this mode you are presented with a dialog that allows you to add to the quantity
 of the currently selected entry.
 
 Simply adjust the amount you want to add to the quantity and select the give button.
+![give mode](/software/pinv/give_mode.png)
 
 #### Take Mode
 In this mode you are presented with a dialog that allows you to subtract from the quantity
 of the currently selected entry.
 
 Simply adjust the amount you want to subtract from the quantity and select the take button.
+![take mode](/software/pinv/take_mode.png)
 
 #### Modify Mode
 In this mode you are presented with a dialog that allows you to modify the selected entry.
@@ -124,6 +132,7 @@ and you can change them to what you wish them to be. You can also clear a field 
 make it "NULL" by simply turning it blank
 
 Once you've modified the fields desired simply select the modfiy button.
+![modify mode](/software/pinv/modify_mode.png)
 
 #### Fill Template Mode
 In this mode you are presented with a dialog which allows you to create a printable
@@ -132,6 +141,7 @@ Simply select the template you want and specify the name of the file you wish to
 Note that the only supported output file type is SVG
 
 Once everything is filled out you can select the fill template button.
+![fill template mode](/software/pinv/fill_template_mode.png)
 
 ### CLI
 

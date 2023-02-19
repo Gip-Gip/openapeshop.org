@@ -83,6 +83,12 @@ h3 {
     font-size: 1.3em;
 }
 
+p img {
+    width: 80vw;
+    height: 20vh;
+    object-fit: contain;
+}
+
 main {
     margin: 1vmin;
 }
